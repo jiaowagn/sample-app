@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
 
+  resources :account_activations, only: [:edit]
+
   resources :users
 
   root 'static_pages#home'
