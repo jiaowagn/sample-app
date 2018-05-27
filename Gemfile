@@ -40,6 +40,8 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'sqlite3'
@@ -74,4 +76,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'pg'
+  gem 'fog'
 end
