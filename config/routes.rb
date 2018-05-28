@@ -15,7 +15,13 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :edit, :create, :update]
   resources :microposts, only: [:create, :destroy]
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy]
 
   root 'static_pages#home'
   # For details on the DSL available within this file, see http:##guides.rubyonrails.org#routing.html
